@@ -1,0 +1,26 @@
+<%-include("partials/header.ejs")%>
+
+<section id="won">
+    <%#ASK USER A QUESTION AND GET RESULT TO RENDER%>
+        <div class="px-4 py-5 my-5 text-center">
+            <h1 class="display-5 fw-bold won_h">
+                CONGRATS YOU ANSWERED CORRECTLY!<br/>
+                WOULD YOU LIKE TO PLAY AGAIN?
+            </h1>
+            <div class="col-lg-6 mx-auto">
+                <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
+                    <%#GET GAME PAGE%>
+                    <form action="/game" method="get">
+                        <input type="submit" class="w_btn_n btn btn-outline-light btn-lg px-4 gap-3" value="YES">
+                    </form>
+                    <%#GET DEATH PAGE%>
+                    <form action="/death" method="get">
+                        <input type="submit" class="w_btn_n btn btn-outline-light btn-lg px-4" value="NO">
+                    </form>
+                </div>
+            </div>
+      </div>
+    
+    </section>
+
+<%-include("partials/footer.ejs")%>

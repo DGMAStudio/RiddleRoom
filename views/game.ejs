@@ -1,0 +1,29 @@
+<%-include("partials/header.ejs")%>
+
+<section id="game">
+
+<%#ASK USER A RIDDLE AND GET RESULT TO RENDER%>
+    <div class="px-4 py-5 my-5 text-center">
+        <h3 class="display-5 fw-bold riddle">
+                <% if (locals.riddle) {%>
+
+                    <%=riddle%>
+
+                <%}%>
+        </h3>
+        <div class="col-lg-6 mx-auto">
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                <form action="/game" method="post">
+                    <%#GET USER'S GUESS%>
+                    <input type="text" class="guess px-4 gap-3" name="guess" size="90" autofocus required><br/><br/>
+                    <%#SUBMIT GUESS BUTTON%>
+                    <input type="submit" class="w_btn_y btn btn-outline-light btn-lg px-4" value="SUBMIT ANSWER">
+                </form>
+            </div>
+        </div>
+  </div>
+
+</section>
+
+
+<%-include("partials/footer.ejs")%>
